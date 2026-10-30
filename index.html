@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Zdjęć | Darmowe Pobieranie</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-color: #f8fafc;
+      --accent-color: #38bdf8;
+      --accent-hover: #0284c7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #94a3b8;
+    }
+
+    .license-notice {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--accent-color);
+      border-radius: 20px;
+      font-size: 0.875rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .photo-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      display: block;
+    }
+    .photo-info {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .photo-details h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .photo-details p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .download-btn {
+      background-color: var(--accent-color);
+      color: #0f172a;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Darmowa Kolekcja Zdjęć</h1>
+  <p>Przeglądaj i pobieraj fotografie w wysokiej rozdzielczości.</p>
+  <span class="license-notice">Licencja: Darmowy użytek prywatny i komercyjny (CC0)</span>
+</header>
+
+<main class="gallery-grid">
+
+  <!-- KARTA ZDJĘCIA 1 -->
+  <article class="photo-card">
+    <img src="zdjecia/Zrzut ekranu 2026-07-30 014346.png" alt="Góry i jezioro w słoneczny dzień" loading="lazy">
+    <div class="photo-info">
+      <div class="photo-details">
+        <h2>Górski krajobraz</h2>
+        <p>JPG • 24 MB</p>
+      </div>
+      <!-- Atrybut 'download' wymusza pobieranie pliku zamiast otwierania go w przeglądarce -->
+      <a href="zdjecia/Zrzut ekranu 2026-07-30 014346.png" download="gorski-krajobraz.jpg" class="download-btn">Pobierz</a>
+    </div>
+  </article>
+
+  <!-- KARTA ZDJĘCIA 2 -->
+  <article class="photo-card">
+    <img src="https://picsum.photos/id/1062/600/400" alt="Pies na spacerze" loading="lazy">
+    <div class="photo-info">
+      <div class="photo-details">
+        <h2>Złota godzina</h2>
+        <p>JPG • 18 MB</p>
+      </div>
+      <a href="https://picsum.photos/id/1062/3840/2160" download="zlota-godzina.jpg" class="download-btn">Pobierz</a>
+    </div>
+  </article>
+
+  <!-- KARTA ZDJĘCIA 3 -->
+  <article class="photo-card">
+    <img src="https://picsum.photos/id/1069/600/400" alt="Nowoczesna architektura" loading="lazy">
+    <div class="photo-info">
+      <div class="photo-details">
+        <h2>Miejska architektura</h2>
+        <p>JPG • 31 MB</p>
+      </div>
+      <a href="https://picsum.photos/id/1069/3840/2160" download="miejska-architektura.jpg" class="download-btn">Pobierz</a>
+    </div>
+  </article>
+
+  <!-- KARTA ZDJĘCIA 4 -->
+  <article class="photo-card">
+    <img src="zdjecia/Zrzut ekranu 2026-10-17 154545.png" alt="Nowoczesna architektura" loading="lazy">
+    <div class="photo-info">
+      <div class="photo-details">
+        <h2>Miejska architektura</h2>
+        <p>png • 31 MB</p>
+      </div>
+      <a href="zdjecia/Zrzut ekranu 2026-10-17 154545.png" download="miejska-architektura.jpg" class="download-btn">Pobierz</a>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Twoje Imię / Nazwa Projektu. Wszystkie prawa zastrzeżone.</p>
+</footer>
+
+</body>
+</html>
